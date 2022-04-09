@@ -12,6 +12,7 @@ const GamePage = (): JSX.Element => {
 	const [screen, setScreen] = useState<screens>('common');
 	const [playersCount, setPlayersCount] = useState<number>(0);
 	const [players, setPlayers] = useState<boolean[]>([]);
+	const [location, setLocation] = useState<string>('');
 	
 	useEffect(() => {
 		if (localStorage.getItem('playersCount')) {
@@ -20,6 +21,8 @@ const GamePage = (): JSX.Element => {
 		};
 		if (localStorage.getItem('players'))
 			setPlayers(JSON.parse(localStorage.getItem('players')));
+		if (localStorage.getItem('location'))
+			setLocation(localStorage.getItem('location'));
 	}, []);
 
 	useEffect(() => {
@@ -70,7 +73,7 @@ const GamePage = (): JSX.Element => {
 								(`Ты шпион. Не раскрой себя! Твоя задача выжить всего 
 									${playersCount} минут, ты справишься!`) 
 								: (`Ты обычный житель. Твоя задача максимально быстро раскрыть шпиона и выиграть игру. 
-								Локация: Казино`)}
+								Локация: ${location}`)}
 						</p>
 
 						<Button className='px-16 mt-4' onClick={() => newPlayer()}>

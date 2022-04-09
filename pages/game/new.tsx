@@ -2,6 +2,7 @@ import { useRouter } from 'next/router';
 import React, { useRef, useState } from 'react';
 import Button from '../../components/Button';
 import Input from '../../components/Input';
+import LOCATIONS from '../../shared/consts/locations';
 
 const CreateGamePage = (): JSX.Element => {
 	const ref = useRef(null);
@@ -15,7 +16,13 @@ const CreateGamePage = (): JSX.Element => {
 		const agentID = Math.floor(Math.random() * Number(currentValue));
 		_players[agentID] = true;
 
-		localStorage.players = JSON.stringify(_players);
+		localStorage.players = JSON.stringify(_players);        
+
+		var _location = '';
+		const locationID = Math.floor(Math.random() * LOCATIONS.length);
+		_location = LOCATIONS[locationID];
+
+		localStorage.location = _location;
 
 		(ref as any).current.style.opacity = 0;
 
