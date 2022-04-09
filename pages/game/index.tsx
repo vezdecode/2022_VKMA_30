@@ -123,7 +123,7 @@ const GamePage = (): JSX.Element => {
 						{playersCount}
 						{' '}
 						{playersCount % 10 === 1 && 'игрок'}
-						{playersCount % 10 > 1 && playersCount % 10 < 4 && 'игрока'}
+						{playersCount % 10 > 1 && playersCount % 10 <= 4 && 'игрока'}
 						{playersCount % 10 > 4 && 'игроков'}
 					</span>
 				</h1>
