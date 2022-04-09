@@ -1,14 +1,14 @@
-# MINI-APP - 20
+# MINI-APP - 30
 - Команда: tipatima
-- Задание: mini-app - 20 баллов
+- Задание: mini-app - 30 баллов
 ## How to run
 Зайти в VK Mini App: 
-https://vk.com/app8131169
+https://vk.com/app8131914
 
 Или запустить локально. Сервер будет развёрнут на http://localhost:3000
 ```
-npm install
-npm start
+yarn
+yarn dev
 ```
 ## Contacts
 - Вконтакте - [Артём Пивко](https://vk.com/xmarburx)

@@ -21,7 +21,7 @@ const MainPage = (): JSX.Element => {
 	}
 
 	return(
-		<div className='p-8' ref={ref}>
+		<div className='p-8 bg-white' ref={ref}>
 			<h1 className='font-bold text-3xl'>
 				Находка для шпиона / Локации
 			</h1>

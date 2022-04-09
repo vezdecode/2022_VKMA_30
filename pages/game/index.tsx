@@ -8,7 +8,7 @@ const GamePage = (): JSX.Element => {
 	const ref = useRef(null);
 	const router = useRouter();
 	const [currentPlayer, setCurrentPlayer] = useState<number>(0);
-	const [counter, setCounter] = useState<number>(0);
+	const [counter, setCounter] = useState<number>(-1);
 	const [screen, setScreen] = useState<screens>('common');
 	const [playersCount, setPlayersCount] = useState<number>(0);
 	const [players, setPlayers] = useState<boolean[]>([]);
@@ -114,7 +114,7 @@ const GamePage = (): JSX.Element => {
 	}
 
 	return(
-		<div className='p-8' ref={ref}>
+		<div className='p-8 bg-white h-screen' ref={ref}>
 			<header>
 				<h1 className='font-semibold text-3xl'>
 					Находка для шпиона!
